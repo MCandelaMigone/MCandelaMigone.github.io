@@ -1,0 +1,3047 @@
+/********
+Definimos tipografías y propiedades básicas del documento
+
+********/
+
+  /* definimos el tamaño de tipografía base y la familia tipográfica por defecto */
+html,
+body {
+  font-size: 10px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita desbordamiento horizontal en toda la página */
+}
+* {
+    box-sizing: border-box !important;
+    /* Importante: esto hace que el tamaño de todas las cajas contemple el padding */
+  }
+
+
+  /********
+  Paso 1: Definimos la estructura básica
+  
+  ********/
+/* Barra de navegación superior */
+header {
+  
+  
+  }
+
+  /* Únicamente la portada tendrá un alto excepcional, para que ocupe toda la pantalla:
+  calculamos el total del alto de la pantalla menos lo que mide el header */
+section#portada {
+    height: 100vh;
+  }
+  
+
+  /********
+  Paso 2: Trabajamos nuestro header
+  
+  ********/
+
+  
+  header {
+    position: relative;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 14px 20px;
+    border-radius: 30px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(203, 203, 203, 0.1); 
+    border: 1px solid #472B1D; /* color del borde retro */
+    box-shadow: 0px 2px 0px #472B1D; /* sombra para dar el efecto retro */
+    z-index: 1000; 
+
+  }
+  
+  .navbar img {
+    width: 70px;
+    padding: 7px;
+    margin-top: 0;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar ul:first-of-type {
+    justify-content: center; 
+    flex-grow: 1;
+}
+
+.navbar ul:last-of-type {
+    margin-left: auto; 
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 200;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    color: #743a27;
+    text-decoration: underline;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.navbar ul li a.cta {
+    background-color: #ffffff;
+    color: #380904;
+    border: 2px solid #380904;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.navbar ul li a.cta:hover {
+    background-color: #2d2522;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.comisionFer img{
+  align-items: flex-end;
+  height: 30px;
+  width: 130px;
+  
+}
+  
+  /********
+    Paso 3: Trabajamos nuestra portada
+    
+    ********/
+    section#portada {
+        background-image: url("../assets/img/portada.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /*para q ocupe toda la altura de la ventana */
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* para alinear el texto al centro horizontalmente */
+        padding: 10px 20px; /*n padding opcional para el contenido */
+      }
+      
+      section#portada h1 {
+        color: #ffffff;
+        font-size: 100px;
+        font-family: "Amarante", sans-serif;
+        font-weight: 200;
+        margin-bottom: 1rem; /* reducir margen inferior */
+    }
+    
+    section#portada h4 {
+        margin-top: 0.5rem; /* reducir margen superior */
+        color: #ffffff;
+        font-weight: lighter;
+        font-family: 'Figtree';
+        font-size: x-large;
+        line-height: 2.5rem; /* reducir line-height */
+        margin-bottom: 1rem; /* reducir margen inferior */
+    }
+    
+    div.portada-izquierda .portada-boton {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem; /* reducir la separación del botón con el texto */
+    }
+    
+      div.portada-izquierda .portada-boton a.boton-submit {
+        margin-top: 2rem;
+        background-color: #FF4B30;
+        font-size: 2rem;
+        padding: 1rem 6rem;
+        border-radius: 30px;
+        font-family: 'Figtree';
+        color: #ffffff;
+        border: 1px solid #472B1D; 
+        box-shadow: 0px 2px 0px #472B1D;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 400;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    div.portada-izquierda .portada-boton a.boton-submit:hover {
+        background-color: #E5351A;
+        transform: translateY(-2px); /* pequeño movimiento hacia arriba al hacer hover */
+    }
+/* INTEGRANTES */
+ 
+/* Sección 1 */
+.team-section1 {
+  display: flex; /* Hacer que los elementos hijos se alineen en fila */
+  justify-content: center; /* Centrar las tarjetas */
+  gap: 30px; /* Espaciado entre las tarjetas */
+  padding: 20px;
+}
+
+/* Sección general */
+.team-section {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-family: 'Amarante', serif;
+  color: #472B1D;
+  margin-top: 80px;
+}
+
+/* Contenedor de las tarjetas (otra sección) */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+.cards-container1 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 0;
+}
+
+
+/* Estilo de las tarjetas */
+.card {
+  background-color: #BEE2F1;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  width: 320px;
+  box-shadow: 5px 5px 0px #472B1D;
+  border: 1px solid #472B1D;
+  margin-bottom: 30px; /
+}
+
+.card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+
+}
+
+.card p {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  font-weight: 400;
+  
+}
+
+/* TRABAJO 1 */
+.Tp1 {
+  text-align: center; 
+}
+
+.trabajo1 h2 {
+  font-family: 'Figtree';
+  font-size: 20px;
+  border: 2px solid #472B1D;
+  font-weight: 400;
+  display: inline-block; 
+  border-radius: 30px;
+  padding: 20px 30px ; 
+}
+
+/*FONDO QUE PASANDO */
+
+#fondoQuePasando {
+  width: 100vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0; 
+  margin-top: 40px;
+}
+
+.fondo {
+  background: url('/assets/img/quePasando.png') no-repeat center center;
+  background-size: cover; /* La imagen cubre toda el área de la sección */
+  text-align: center;
+  width: 100%; /* Asegura que el fondo ocupe todo el ancho del contenedor */
+  min-height: 700px; /* Puedes ajustar la altura mínima según sea necesario */
+  color: white;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-family: 'Amarante';
+ font-weight: 200;
+  margin-top: 5%;
+}
+
+p {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  font-weight: 200;
+  font-weight: lighter;
+
+}
+.semibold {
+  font-weight: 500; 
+  font-style: italic; 
+}
+
+
+.cifras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  width: 100%;
+  gap: 160px; 
+}
+
+.dato {
+  text-align: center;
+}
+
+.dato h2 {
+  font-size: 10rem;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-weight: 200;
+  
+}
+
+.dato p {
+  font-size: 2.5em;
+  margin: 0;
+  text-align: left; 
+  
+}
+
+
+/*QUE HACEMOS QUE PASE?*/
+.queHacemos{
+  background: url('/assets/img/fondoQueHacemos.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  min-height: 700px;
+  margin: 0; /* Sin márgenes */
+  padding-bottom: 0; /* Sin relleno adicional en la parte inferior */
+}
+
+.info-container {
+  background-color: #F8EDE5;
+  color: #472B1D;
+  padding: 60px 60px;
+  text-align: center;
+  border-radius: 20px; 
+  box-shadow: 5px 5px 0px #472B1D;
+  border: 1px solid #472B1D;
+  max-width: 900px; 
+  margin: 200px auto; 
+  font-family: 'Amarante', serif; 
+}
+
+.info-container h2 {
+  font-size: 3.5rem;
+  font-family: 'Amarante', serif; 
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin: 0;
+  color: #472B1D;
+}
+
+.info-container p {
+  font-size: 2.5rem;
+  line-height: 1.6;
+  font-weight: 200;
+  margin-bottom: 30px;
+  font-family: 'Figtree';
+}
+
+.info-container .more-info {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #472B1D;
+  text-decoration: none;
+  border-bottom: 2px solid #472B1D;
+  font-family: 'Figtree';
+  padding-bottom: 5px;
+}
+
+.info-container .more-info:hover {
+  color: #23150e;
+  border-bottom-color: #472B1D;
+  transform: translateY(-20px); /* pequeño movimiento hacia arriba al hacer hover */
+
+}
+.acompañanteTerapeutico{
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* UNIVERSO */
+.universo {
+  background-image: url("../assets/img/universo.png");
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Centra verticalmente el contenido */
+  margin: 0; /* Sin márgenes externos */
+  padding: 80px 60px 50px 60px; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa todo el ancho */
+  background-size: cover; /* La imagen de fondo cubre todo el contenedor */
+  background-repeat: no-repeat; /* Sin repetición */
+  background-position: center; /* Centra el fondo */
+}
+
+.text-section {
+  flex: 1; /* Ocupa espacio proporcional */
+  margin: 0; /* Sin márgenes externos */
+  padding: 0 20px; /* Ajusta el espaciado interno */
+  color: #FFFFFF;
+  max-width: 50%; /* Limita el ancho para texto */
+}
+
+.text-section h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-family: 'Amarante';
+  color: #FFFFFF;
+  font-weight: 200;
+  margin-top: 0;
+}
+
+.text-section p {
+  font-size: 2.5rem; 
+  line-height: 1.4;
+  margin-bottom: 40px; 
+  margin-left: 0;
+  margin-right: 0;
+  color: #ffffff;
+}
+.text-section a {
+  font-size: 2rem; 
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 40px; 
+  margin-left: 0;
+  margin-right: 0;
+  color: #ffffff;
+}
+
+.image-section {
+  flex: 1; /* Ocupa espacio proporcional */
+  max-width: 30%; /* Limita el ancho máximo */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+}
+
+.image-section img {
+  width: 100%; /* Imagen se adapta al contenedor */
+  height: auto; /* Mantiene proporción */
+  display: block; /* Elimina espacios debajo de la imagen */
+}
+
+/* HISTORIA*/
+.historia {
+  background-color: #fcefe6; /* Fondo cálido */
+  position: relative;
+}
+
+/* Estilo de las cortinas */
+.cortinas {
+  background-image: url("../assets/img/teatro.png");
+  background-size: cover;
+  background-position: center;
+  padding: 90px;
+  height: 100;
+}
+
+/* Contenido interno */
+.contenido {
+  text-align: center;
+  font-family: "Figtree", serif;
+  color: #523532;
+  padding: 30px 200px 30px 200px;
+}
+
+/* Título principal */
+.contenido h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Estilo de cada acto */
+.acto {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.acto h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #523532;
+  text-transform: uppercase;
+}
+
+.acto p {
+  font-size: 18px;
+  color: #523532;
+}
+
+
+/*CARRUSEL */
+.carrusel h2{
+  font-weight: 200;
+  text-align: center;
+}
+.carousel {
+  position: relative;
+  width: 500px; 
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.instagram-frame {
+  position: relative;
+  width: 100%;
+  height: auto;
+  width: 498px; 
+
+}
+
+.frame-image {
+  width: 100%;
+  display: block;
+}
+
+.carousel-images {
+  position: absolute;
+  top: 105px;
+  left: 30px;
+  right: 0;
+  z-index: 0;
+}
+
+.carousel-image img {
+  width: 437px; 
+  height: auto;
+  display: block;
+}
+
+
+.carousel-image {
+  display: none;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 20px; 
+  padding: 10px; 
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px; 
+  height: 30px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 0 45px; 
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 110px; 
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 10px; 
+  width: 10px; 
+  margin: 0 4px; 
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+/* Carrusel móvil */
+.mobile-carousel {
+  display: none; /* Ocultar el carrusel móvil por defecto */
+
+}
+
+/* ANSIOPTIX */
+.contenedor-fondo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/img/Ansioptix.png'); /* Fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Espacia el texto e imagen */
+  padding:0 5% 0 5%; /* Espaciado lateral */
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.contenido-texto {
+  color: white;
+  width: 40%;
+  text-align: justify;
+  margin-top: -40px;
+}
+
+.contenido-texto h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-family: 'Amarante', serif;
+  text-align: left; 
+  margin-top: 0;
+}
+
+.contenido-texto p {
+  font-size: 2.5rem;
+}
+
+.contenedor-fondo img {
+  max-width: 600px; 
+  width: 60%; 
+  height: auto; 
+  object-fit: contain;
+}
+
+/* Estilo general del carrusel */
+.carrusel-registro h1 {
+  font-family: 'Amarante', sans-serif; /* Tipografía retro */
+  font-weight: 200;
+  text-align: center;
+  color: #523532; /* Color cálido retro */
+  margin-bottom: 40px;
+
+
+
+}
+
+.image-slider {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el efecto 3D */
+  border-radius: 40px; /* Bordes redondeados */
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px; /* Bordes redondeados en las imágenes */
+}
+
+/* Estilo para los botones de flechas */
+.prev-button1, .next-button1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px; /* Ajustado para crear un botón redondo sin achatamiento */
+  cursor: pointer;
+  font-size: 25px; /* Tamaño de fuente más grande para las flechas */
+  border-radius: 50%; /* Flechas redondeadas */
+  width: 50px; /* Ancho fijo para que el botón sea circular */
+  height: 50px; /* Alto fijo para que el botón sea circular */
+  display: flex; /* Asegura que las flechas se centren dentro del botón */
+  align-items: center; /* Centra las flechas verticalmente */
+  justify-content: center; /* Centra las flechas horizontalmente */
+  transition: background-color 0.3s ease;
+}
+
+.prev-button1:hover, .next-button1:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Efecto hover */
+}
+
+.prev-button1 {
+  left: 10px;
+}
+
+.next-button1 {
+  right: 10px;
+}
+
+/* CARRUSEL TATODOBIEN */
+.tatodobien-galeria h2 {
+  font-weight: 200;
+  text-align: center;
+}
+
+.tatodobien-carousel {
+  position: relative;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.tatodobien-frame {
+  position: relative;
+  width: 100%;
+  height: auto;
+  width: 498px; /* Ancho ajustado */
+}
+
+.frame-image {
+  width: 100%;
+  display: block;
+}
+
+.tatodobien-carousel-images {
+  position: absolute;
+  top: 105px;
+  left: 30px;
+  right: 0;
+  z-index: 0;
+}
+
+.tatodobien-carousel-image img,
+.tatodobien-carousel-image video {
+  width: 437px; /* Mismo ancho que las imágenes */
+  height: auto; /* Ajuste automático de altura para mantener proporción */
+  display: block;
+  object-fit: cover; /* Ajusta el contenido sin distorsionar */
+}
+
+.tatodobien-carousel-image {
+  display: none;
+}
+
+.tatodobien-carousel-image.active {
+  display: block;
+}
+
+.tatodobien-carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tatodobien-carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 0 45px;
+}
+
+.tatodobien-carousel-indicators {
+  position: absolute;
+  bottom: 110px;
+  width: 100%;
+  text-align: center;
+}
+
+.tatodobien-dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tatodobien-dot.active {
+  background-color: #717171;
+}
+
+/* TRANSMEDIA */
+.transmedia {
+  text-align: center;
+  font-family: 'Amarante', serif;
+  color: #472B1D;
+}
+
+.transmedia h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+.transmedia .line-background {
+  height: 650px; /* Reduce la altura para evitar que ocupe tanto espacio */
+  width: 650px; /* Reduce el ancho proporcionalmente */
+  margin-left: 100px;
+  margin-top: -150px; /* Centra la imagen y deja espacio arriba/abajo */
+  background: url("../assets/img/laberinto.png") no-repeat center center;
+  background-size: contain;
+
+}
+
+.transmedia h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -200px; /* Reduce el espacio entre el título y la imagen */
+  font-family: 'Figtree', serif;
+
+}
+
+.flyers-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 20px; 
+}
+
+.flyer img {
+  width: 250px; 
+  height: auto;
+  box-shadow: 0 4px 8px rgba(126, 126, 126, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-carousel-custom {
+  display: none;
+}
+.mobile-carousel-custom1 {
+  display: none;
+}
+
+/* LANDING PAGE */
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* Línea roja */
+.linea-roja {
+  height: 120px;
+  margin-bottom: 10px; 
+  z-index: 1;
+}
+
+/* Título LANDING PAGE */
+.titulo {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; 
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Computadora */
+.computadora-container {
+  display: flex;
+  justify-content: center;
+}
+
+.computadora {
+  width: 600px; 
+  height: auto;
+  z-index: 0;
+}
+.boton-container {
+  text-align: center; /* Centrar el botón debajo de la imagen */
+  margin-top: 20px; /* Separación del botón respecto a la imagen */
+}
+
+.boton {
+  font-family: 'Figtree', sans-serif;
+  font-size: 16px;
+  color: #380904; /* Color del texto */
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #380904; /* Borde marrón */
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  cursor: pointer; /* Cambia el cursor */
+  display: inline-block; /* Se comporta como botón */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.boton:hover {
+  background-color: #380904; /* Fondo claro al pasar el mouse */
+  color: #ffffff;
+}
+
+.boton-container2 {
+  text-align: center; /* Centrar el botón debajo de la imagen */
+  margin-top: 20px; /* Separación del botón respecto a la imagen */
+}
+
+.boton {
+  font-family: 'Figtree', sans-serif;
+  font-size: 16px;
+  color: #380904; /* Color del texto */
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #380904; /* Borde marrón */
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  cursor: pointer; /* Cambia el cursor */
+  display: inline-block; /* Se comporta como botón */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.boton2:hover {
+  background-color: #380904; /* Fondo claro al pasar el mouse */
+  color: #ffffff;
+}
+
+
+/* DIARIO DE TOMAS TIRADO */
+
+.diario {
+  text-align: center;
+  margin: 50px 20px;
+}
+
+.linea-semana {
+  display: flex;
+  justify-content: flex-end; 
+  margin-bottom: 20px;
+}
+
+.lineaRoja2 {
+  width: 600px;
+  height: auto;
+  margin-right: 130px; 
+}
+
+.titulo-diario {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y la computadora */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagen-diario-container {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-diario {
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #CCC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*centro de información*/
+
+.landing-page3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* Línea roja */
+.linea-roja3{
+  height: 120px;
+  margin-bottom: 10px; /* Separación entre la línea y el texto */
+  z-index: 1;
+}
+
+/* Título LANDING PAGE */
+.titulo3 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y la computadora */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Computadora */
+.computadora-container3 {
+  display: flex;
+  justify-content: center;
+}
+
+.computadora3 {
+  width: 600px; /* Ajusta el tamaño para desktop */
+  height: auto;
+  z-index: 0;
+}
+
+/* AUDICIONES TOMÁS */
+.transmedia2 {
+  text-align: center;
+  font-family: 'Amarante', serif;
+  color: #472B1D;
+}
+
+.transmedia2 h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+.transmedia2 .line-background2 {
+  height: 650px; /* Reduce la altura para evitar que ocupe tanto espacio */
+  width: 650px; /* Reduce el ancho proporcionalmente */
+  margin-left: 100px;
+  margin-top: -150px; /* Centra la imagen y deja espacio arriba/abajo */
+  background: url("../assets/img/laberintoSemana3.png") no-repeat center center;
+  background-size: contain;
+
+}
+
+.transmedia2 h3{
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -100px; /* Reduce el espacio entre el título y la imagen */
+  font-family: 'Figtree', serif;
+}
+
+.flyers-container2 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los folletos se ajusten en filas */
+  justify-content: center;
+  gap: 30px; /* Reduce el espacio entre los folletos */
+  margin-top: 20px; /* Reduce el espacio entre el contenedor y el laberinto */
+}
+
+.flyer2 img {
+  width: 400px; /* Reduce el tamaño de los folletos para equilibrar */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(126, 126, 126, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/*DISCORD DE TALLER*/
+
+.landing-page4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* Línea roja */
+.linea-roja4{
+  height: 120px;
+  margin-bottom: 10px; /* Separación entre la línea y el texto */
+  z-index: 1;
+}
+
+/* Título LANDING PAGE */
+.titulo4 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y la computadora */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Computadora */
+.computadora-container4 {
+  display: flex;
+  justify-content: center;
+}
+/* Computadora */
+.computadora-container4 img{
+ border-radius: 20px;
+}
+
+.computadora4 {
+  width: 600px; /* Ajusta el tamaño para desktop */
+  height: auto;
+  z-index: 0;
+}
+
+
+/* TESTIMONIO DE TOMÁS */
+
+.diario3 {
+  text-align: center;
+  margin: 50px 20px;
+}
+
+.linea-semana3 {
+  display: flex;
+  justify-content: flex-end; /* Alinea la línea roja a la derecha */
+  margin-bottom: 20px;
+}
+
+.lineaRoja3 {
+  width: 600px; /* Ajustá según el tamaño real del PNG */
+  height: auto;
+  margin-right: 130px; /* Este ya está correcto */
+}
+
+.titulo-diario3 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y la computadora */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.imagen-diario-container3 {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-diario3 {
+  width: 80%;
+  max-width: 700px;
+
+}
+
+/* HISTORIA TOMAS PERDIO LOS LENTES */
+.transmedia4 {
+  text-align: center;
+  font-family: 'Amarante', serif;
+  color: #472B1D;
+}
+
+.transmedia4 h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+.transmedia4 .line-background4 {
+  height: 650px; /* Reduce la altura para evitar que ocupe tanto espacio */
+  width: 650px; /* Reduce el ancho proporcionalmente */
+  margin-left: 100px;
+  margin-top: -150px; /* Centra la imagen y deja espacio arriba/abajo */
+  background: url("../assets/img/laberinto.png") no-repeat center center;
+  background-size: contain;
+
+}
+
+.transmedia4 h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -200px; /* Reduce el espacio entre el título y la imagen */
+  font-family: 'Figtree', serif;
+
+}
+
+.flyers-container4 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los folletos se ajusten en filas */
+  justify-content: center;
+  gap: 30px; /* Reduce el espacio entre los folletos */
+  margin-top: 20px; /* Reduce el espacio entre el contenedor y el laberinto */
+}
+
+.flyer4 img {
+  width: 250px; /* Reduce el tamaño de los folletos para equilibrar */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(126, 126, 126, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* AUDICIONES TOMÁS */
+.transmedia4 {
+  text-align: center;
+  font-family: 'Amarante', serif;
+  color: #472B1D;
+}
+
+.transmedia4 h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+.transmedia4 .line-background4 {
+  height: 650px; /* Reduce la altura para evitar que ocupe tanto espacio */
+  width: 650px; /* Reduce el ancho proporcionalmente */
+  margin-left: 100px;
+  margin-top: -150px; /* Centra la imagen y deja espacio arriba/abajo */
+  background: url("../assets/img/laberintoSemana5.png") no-repeat center center;
+  background-size: contain;
+
+}
+
+.transmedia4 h3{
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -200px; /* Reduce el espacio entre el título y la imagen */
+  font-family: 'Figtree', serif;
+}
+
+.flyers-container4 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los folletos se ajusten en filas */
+  justify-content: center;
+  gap: 30px; /* Reduce el espacio entre los folletos */
+  margin-top: 20px; /* Reduce el espacio entre el contenedor y el laberinto */
+}
+
+.flyer2 img {
+  width: 400px; /* Reduce el tamaño de los folletos para equilibrar */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(126, 126, 126, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/*STAND DE LA MARCA*/
+
+.landing-page5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* Línea roja */
+.linea-roja5{
+  height: 120px;
+  margin-bottom: 10px; /* Separación entre la línea y el texto */
+  z-index: 1;
+}
+
+/* Título LANDING PAGE */
+.titulo5 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y la computadora */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Computadora */
+.computadora-container5 {
+  display: flex;
+  justify-content: center;
+}
+/* Computadora */
+.computadora-container5 img{
+ border-radius: 20px;
+}
+
+.computadora5 {
+  width: 600px; /* Ajusta el tamaño para desktop */
+  height: auto;
+  z-index: 0;
+}
+
+/*BUSQUEDA DEL TESORO*/
+.landing-page6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* Línea roja */
+.linea-roja6 {
+  height: 120px;
+  margin-bottom: 10px; /* Separación entre la línea y el texto */
+  z-index: 1;
+}
+
+/* Título LANDING PAGE */
+.titulo6 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y las cards */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contenedor de cards */
+.cards-container6 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 10px; /* Espaciado entre las cards */
+  margin-top: 20px;
+  justify-items: center;
+}
+
+/* Estilo de las cards */
+.card6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9; /* Color de fondo de la card */
+  border: 0px solid #ccc;
+  border-radius: 0;
+  padding: 15px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(67, 67, 67, 0.2);
+ 
+}
+
+
+
+.card-image6 {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-text6 {
+  margin-top: 10px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  color: #472B1D;
+  text-align: center;
+}
+
+/* INVITACIÓN A LA MUESTRA*/
+
+
+.diario7 {
+  text-align: center;
+  margin: 50px 20px;
+}
+
+.linea-semana7 {
+  display: flex;
+  justify-content: flex-end; /* Alinea la línea roja a la derecha */
+  margin-bottom: 20px;
+}
+
+.lineaRoja7 {
+  width: 600px; /* Ajustá según el tamaño real del PNG */
+  height: auto;
+  margin-right: 130px; /* Este ya está correcto */
+}
+
+.titulo-diario7 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 20px; /* Espaciado entre el texto y la computadora */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.imagen-diario-container7 {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-diario7 {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+
+}
+
+/* SECCION DE LA CABINA CON VIDEO */
+/* Estilo específico para la sección de "La Cabina" */
+/* Estilo para la sección */
+.cabina-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #10151b;
+  color: #d6d6d6;
+  margin-top: 200px; /* Aumenta la separación con la sección anterior */
+}
+
+/* Título */
+.cabina-section .text-section h2 {
+  font-family: 'Amarante', serif;
+  font-size: 4rem;
+  color: #f5f5f5;
+  margin-bottom: 50px; /* Espaciado entre el título y el texto */
+  padding-left: 50px; /* Aumenta la separación desde el margen izquierdo */
+}
+
+/* Párrafos */
+.cabina-section .text-section p {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+  margin-bottom: 30px; /* Espaciado entre los párrafos */
+  padding-left: 50px; /* Aumenta la separación desde el margen izquierdo */
+}
+
+/* Último párrafo sin margen extra */
+.cabina-section .text-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Video */
+.video-section {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabina-video {
+    width: 300px; /* Ancho deseado */
+    height: auto; /* Mantiene las proporciones del video */
+    border: 2px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Opcional: redondear bordes */
+}
+
+.cabina-process {
+  height: 300px; /* Altura del contenedor, ajusta según necesites */
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+}
+
+.cabina-process h2 {
+  font-family: 'Amarante', serif; /* Cambia por la fuente deseada */
+  font-size: 4rem; /* Tamaño del texto */
+  color: #523532; /* Color marrón */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-transform: uppercase; /* Todo en mayúsculas */
+  padding-left: 100px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.plano-idea {
+  margin-top: 10px;
+  display: flex; /* Distribuye en dos columnas */
+  align-items: flex-start; /* Alinea los elementos desde la parte superior */
+  justify-content: space-between; /* Espaciado entre texto e imagen */
+  padding: 10px;
+  color: #522C23; /* Color del texto */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en línea si no hay espacio */
+}
+
+.right {
+  max-width: 50%; /* Ocupa la mitad del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-left: 90px; /* Espaciado del texto desde el borde izquierdo */
+  margin-top: 0;
+}
+
+.right h2 {
+  font-family: 'Amarante', serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.right hr {
+  border: 1px solid #C5D9E3; /* Línea separadora */
+  margin-bottom: 20px;
+  margin: 10px 0; /* Espaciado vertical alrededor de la línea */
+}
+
+.right p {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+}
+
+.left {
+  max-width: 35%; /* Ajusta el ancho de la imagen */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.left img {
+  width: 80%; /* La imagen ocupará el 80% del contenedor (puedes reducir este valor) */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 0; /* Elimina márgenes extra */
+}
+
+.Boton {
+  margin-top: 0;
+  display: flex; /* Distribuye en dos columnas */
+  align-items: flex-start; /* Alinea los elementos desde la parte superior */
+  justify-content: space-between; /* Espaciado entre texto e imagen */
+  color: #380904; /* Color del texto */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en línea si no hay espacio */
+  gap: 20px; /* Espaciado adicional entre los elementos */
+}
+
+.rightBoton {
+  max-width: 50%; /* Ocupa la mitad del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; /* Asegura que no haya márgenes adicionales */
+  padding-left: 90px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.rightBoton h2 {
+  font-family: 'Amarante', serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  margin-top: 0; /* Elimina márgenes superiores */
+}
+
+.rightBoton hr {
+  border: 1px solid #C5D9E3; /* Línea separadora */
+  margin-bottom: 20px;
+  width: 300px; /* Ajusta el ancho de la línea */
+  margin: 10px 0; /* Espaciado vertical alrededor de la línea */
+}
+
+.rightBoton p {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+  margin: 0; /* Elimina márgenes que puedan desalinear */
+}
+
+.leftBoton {
+  max-width: 28%; /* Ajusta el ancho del lado izquierdo */
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin: 0; /* Elimina márgenes adicionales */
+  padding-right: 100px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.leftBoton img {
+  width: 100%; /* Asegura que la imagen ocupe el ancho total disponible */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  margin: 0; /* Elimina márgenes de la imagen */
+  padding: 0; /* Asegura que no haya padding */
+}
+
+.Estructura {
+  margin-top: 0;
+  display: flex; /* Distribuye en dos columnas */
+  align-items: flex-start; /* Alinea los elementos desde la parte superior */
+  justify-content: space-between; /* Espaciado entre texto e imagen */
+  color: #522C23; /* Color del texto */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en línea si no hay espacio */
+  gap: 20px; /* Espaciado adicional entre los elementos */
+}
+
+.rightEstructura {
+  max-width: 50%; /* Ocupa la mitad del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; /* Asegura que no haya márgenes adicionales */
+  padding-left: 90px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.rightEstructura h2 {
+  font-family: 'Amarante', serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  margin-top: 0; /* Elimina márgenes superiores */
+}
+
+.rightEstructura hr {
+  border: 1px solid #C5D9E3; /* Línea separadora */
+  margin-bottom: 20px;
+  width: 300px; /* Ajusta el ancho de la línea */
+  margin: 10px 0; /* Espaciado vertical alrededor de la línea */
+}
+
+.rightEstructura p {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+  margin: 0; /* Elimina márgenes que puedan desalinear */
+}
+
+.leftEstructura {
+  max-width: 35%; /* Ajusta el ancho del lado izquierdo */
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin: 0; /* Elimina márgenes adicionales */
+  padding-right: 100px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.leftEstructura img {
+  width: 100%; /* Asegura que la imagen ocupe el ancho total disponible */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  margin: 0; /* Elimina márgenes de la imagen */
+  padding: 0; /* Asegura que no haya padding */
+}
+
+.ElectronicaCabina {
+  margin-top: 0;
+  display: flex; /* Distribuye en dos columnas */
+  align-items: flex-start; /* Alinea los elementos desde la parte superior */
+  justify-content: space-between; /* Espaciado entre texto e imagen */
+  color: #522C23; /* Color del texto */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en línea si no hay espacio */
+  gap: 20px; /* Espaciado adicional entre los elementos */
+}
+
+.rightElectronicaCabina {
+  max-width: 50%; /* Ocupa la mitad del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; /* Asegura que no haya márgenes adicionales */
+  padding-left: 90px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.rightElectronicaCabina h2 {
+  font-family: 'Amarante', serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  margin-top: 0; /* Elimina márgenes superiores */
+}
+
+.rightElectronicaCabina hr {
+  border: 1px solid #C5D9E3; /* Línea separadora */
+  margin-bottom: 20px;
+  width: 300px; /* Ajusta el ancho de la línea */
+  margin: 10px 0; /* Espaciado vertical alrededor de la línea */
+}
+
+.rightElectronicaCabina p {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+  margin: 0; /* Elimina márgenes que puedan desalinear */
+}
+
+.leftElectronicaCabina {
+  max-width: 45%; /* Ajusta el ancho del lado izquierdo */
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin: 0; /* Elimina márgenes adicionales */
+  padding-right: 100px; /* Espaciado del texto desde el borde izquierdo */
+}
+
+.leftElectronicaCabina img {
+  width: 100%; /* Asegura que la imagen ocupe el ancho total disponible */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  margin: 0; /* Elimina márgenes de la imagen */
+  padding: 0; /* Asegura que no haya padding */
+}
+
+/* SECCION DE LA CABINA CON VIDEO */
+/* Estilo específico para la sección de "La Cabina" */
+/* Estilo para la sección */
+.cabina-section2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #5A97E8;
+  color: #f0f0f0;
+  gap: 300px;
+
+}
+
+/* Título */
+.cabina-section2 .text-section2 h2 {
+  font-family: 'Amarante', serif;
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 50px; /* Espaciado entre el título y el texto */
+  padding-left: 50px; /* Aumenta la separación desde el margen izquierdo */
+  margin-top: 0;
+  font-weight: 200;
+}
+
+/* Párrafos */
+.cabina-section2 .text-section2 p {
+  font-family: 'Figtree', serif;
+  font-size: 2rem;
+  margin-bottom: 30px; /* Espaciado entre los párrafos */
+  padding-left: 50px; /* Aumenta la separación desde el margen izquierdo */
+}
+
+/* Último párrafo sin margen extra */
+.cabina-section2 .text-section2 p:last-child {
+  margin-bottom: 0;
+}
+
+/* Video */
+.video-section2 {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 200px;
+}
+
+.cabina-video2 {
+    width: 300px; /* Ancho deseado */
+    height: auto; /* Mantiene las proporciones del video */
+    border: 2px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Opcional: redondear bordes */
+   
+}
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Ocultar botón de hamburguesa en pantallas grandes */
+  }
+  #mobile-menu {
+    display: none;
+  }
+  
+  .navbar ul {
+    display: flex; /* Mostrar la barra de navegación como fila */
+    flex-direction: row;
+    position: static; /* Posición estática para alineación normal */
+    width: auto;
+  }
+
+  .contenidoMobile {
+    display: none; /* Ocultar contenido específico de dispositivos móviles */
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: space-between; 
+    transform: none;
+    border-radius: 0;
+    padding: 10px;
+    position: fixed; /* Barra fija en la parte superior */
+    background-color: #fff; /* Fondo blanco para la barra */
+    z-index: 1000;
+  }
+
+  .navbar img {
+    width: 80px; 
+    margin: 0; 
+    display: block;
+  }
+
+  .hamburger {
+    display: block; /* Mostrar el botón de hamburguesa */
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .navbar ul {
+    display: none; /* Ocultar los enlaces de navegación por defecto */
+    flex-direction: column;
+    position: fixed; /* Asegurar que cubran toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: #FF4B30; 
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+  #mobile-menu.active {
+    display: flex !important;
+  }
+  #mobile-menu {
+    display: none; /* Ocultar el menú móvil por defecto */
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 100%;
+    height: 100%; 
+    background-color: #FF4B30; /* Fondo del menú móvil */
+    justify-content: center; 
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    z-index: 1000; 
+    flex-direction: column;
+  }
+
+
+  #mobile-menu {
+    z-index: 9999;
+  }
+  
+
+  .close-btn {
+    display: none; /* Ocultar botón de cerrar por defecto */
+    background: none;
+    border: none;
+    font-size: 50px;
+    font-weight: 100;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #mobile-menu.active .close-btn {
+    display: block; 
+  }
+
+  #mobile-menu ul {
+    display: flex; 
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  #mobile-menu ul li {
+    margin: 15px 0; /* Espaciado entre elementos del menú */
+  }
+
+  #mobile-menu ul li a {
+    color: #fff; 
+    font-size: 30px; /* Tamaño de fuente grande para dispositivos móviles */
+    text-decoration: none;
+  }
+
+  #mobile-menu ul li a:hover {
+    color: #ffffff; /* Cambiar el color al pasar el mouse */
+  }
+.comisionFer{
+  display: none;
+}
+
+
+  /********
+portada
+  ********/
+
+  section#portada {
+    background-image: url("../assets/img/portadamobile.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  section#portada {
+    padding: 5px 16px;
+    height: 100vh; 
+    justify-content: space-between; 
+    margin-bottom: 0px;
+  }
+  
+  section#portada h1 {
+    font-size: 40px; 
+    margin-top: 90%; 
+    padding: 0 15px;
+  }
+  
+  section#portada h4 {
+    font-size: 18px; 
+    margin-top: 10px; 
+  }
+  
+  div.portada-izquierda .portada-boton {
+    margin-top: auto; 
+    justify-content: center; 
+    width: 100%; 
+  }
+  
+  div.portada-izquierda .portada-boton a.boton-submit {
+    font-size: 1.5rem; 
+    padding: 1rem 3rem;
+  }
+
+
+  /*iNTEGRANTES*/
+.team-section h2{
+  font-size: 3rem;
+}
+
+    .team-section1,
+    .cards-container,
+    .cards-container1 {
+      flex-direction: column; /* Alinear todas las tarjetas en columna */
+      gap: 20px; /* Reducir espacio entre tarjetas */
+      padding: 0;
+    }
+    .cards-container1 {
+      margin-top: 20px;
+    }
+  
+    .card {
+      width: 90%; /* Ajustar el ancho de las tarjetas al 90% del contenedor */
+      margin: 0 auto; /* Centrar las tarjetas */
+    }
+  
+    .card h3 {
+      font-size: 1.8rem; /* Reducir tamaño de los títulos */
+    }
+  
+    .card p {
+      font-size: 16px; /* Reducir tamaño del texto */
+    }
+  
+
+      /*TRABAJOS*/
+      .Tp1 {
+        padding: 20px; /* Ajustar padding para dispositivos pequeños */
+      }
+    .trabajo1 h2 {
+      font-size: 16px; /* Ajustar tamaño del texto del Trabajo 1 */
+      padding: 15px 20px 20px 20px; /* Reducir padding */
+    }
+
+
+     /*QUE PASANDO */
+    .fondo {
+      background-image: url('../assets/img/quePasandoMobil.png'); 
+      background-position: center center;
+      background-size: cover; 
+    }
+    .fondo h1 {
+      font-size: 3rem; 
+      margin: 10px;
+      margin-top: 90px;
+    
+    }
+  
+    .fondo p {
+      font-size: 1.5rem;
+      padding:0 25px;
+      margin: 0;
+    }
+    .cifras {
+      flex-direction: column;
+      gap: 5px; 
+      margin-top: 0;
+      margin: 0 !important;    }
+  
+    .dato h2 {
+      font-size: 6rem; 
+      margin-top: 20px;
+    }
+  
+    .dato p {
+      font-size: 1.5em; 
+      padding: 0;
+    }
+
+     /*QUE HACEMOS*/
+
+    .queHacemos {
+      min-height: 300px; /* Ajustar altura para dispositivos más pequeños */
+    }
+  
+    .info-container {
+      padding: 40px 10px; /* Reducir aún más el relleno */
+      margin: 60px 40px; /* Reducir el margen superior */
+    }
+  
+    .info-container h2 {
+      font-size: 2rem; /* Reducir aún más el tamaño del título */
+    }
+  
+    .info-container p {
+      font-size: 1.5rem; /* Reducir aún más el tamaño del texto */
+      padding: 20px;
+    }
+  
+    .info-container .more-info {
+      font-size: 1.4rem; /* Ajustar tamaño del enlace */
+    }
+  
+    .acompañanteTerapeutico {
+      font-size: 1.4rem; /* Ajuste del tamaño de texto */
+    }
+
+      .text-section h2 {
+    font-size: 2rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .text-section p {
+    font-size: 1.5rem; /* Reducir aún más el tamaño del texto */
+  }
+
+  .text-section a {
+    font-size: 1.4rem; /* Ajustar tamaño del enlace */
+  }
+
+  .image-section img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+  }
+
+
+ /* UNIVERSO */
+ .universo {
+  flex-direction: column; /* Alinear elementos en columna */
+  padding: 40px 20px 30px 20px; /* Reducir padding para optimizar espacio */
+  background-image: url("../assets/img/universoMobile.png"); /* Cambiar imagen de fondo para móviles */
+  background-size: cover; /* Asegurar que la imagen cubra todo el contenedor */
+  background-position: center; /* Centrar la imagen de fondo */
+  min-height: auto; /* Ajustar altura mínima si es necesario */
+}
+
+/* Sección de Texto */
+.text-section {
+  max-width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 10px; /* Reducir padding lateral */
+}
+
+.text-section h2 {
+  font-size: 2rem; /* Reducir tamaño del título */
+  margin-bottom: 10px; /* Ajustar espacio inferior */
+}
+
+.text-section p {
+  font-size: 1.4rem; /* Reducir tamaño del texto */
+  margin-bottom: 20px; /* Reducir espacio inferior */
+}
+
+.text-section a {
+  font-size: 1.2rem; /* Reducir tamaño del enlace */
+}
+
+.image-section {
+  max-width: 100%; /* Ocupa todo el ancho disponible */
+  margin-top: 20px; /* Añadir espacio superior */
+}
+
+.image-section img {
+  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantener proporción de la imagen */
+  display: block; /* Eliminar espacios debajo de la imagen */
+}
+
+
+/* HISTORIA */
+
+
+
+.cortinas {
+  background-image: url("../assets/img/teatroMobile.png"); /* Nuevo fondo para pantallas pequeñas */
+  background-size: cover; /* Cubrir toda el área */
+  background-position: center; /* Centrar la imagen */
+  padding: 50px; /* Reducir padding */
+}
+
+.contenido {
+  padding: 10px; /* Ajustar espacio interno */
+  font-size: 14px; /* Reducir tamaño del texto general */
+}
+
+.contenido h2 {
+  font-size: 20px; /* Tamaño reducido del título principal */
+  margin-bottom: 15px; /* Espaciado más ajustado */
+}
+
+.acto {
+  margin-bottom: 10px; /* Menos espacio entre actos */
+}
+
+.acto h3 {
+  font-size: 16px; /* Tamaño más pequeño para subtítulos */
+}
+
+.acto p {
+  font-size: 14px; 
+}
+
+
+.carousel{
+  display: none;
+}
+
+.carrusel h2{
+font-size: 20px;
+}
+
+.mobile-carousel-custom {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 10px; /* Agrega espacio a los costados */
+}
+
+.carousel-images-custom {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 10px; /* Añade espacio entre las imágenes */
+}
+
+.carousel-image-custom {
+  min-width: calc(100% - 20px); /* Ajusta las imágenes para que ocupen menos que el 100% */
+  display: none;
+  overflow: hidden;
+  margin: 0 10px; /* Espacio entre cada imagen */
+}
+
+.carousel-image-custom.active {
+  display: block;
+}
+
+.carousel-image-custom img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
+}
+
+.carousel-indicators-custom {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot-custom {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot-custom.active {
+  background-color: #717171;
+}
+
+/* Estilos de las flechas */
+.mobile-carousel-custom button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px ;
+  
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.mobile-carousel-custom .prev-custom {
+  left: 40px;
+  /* Centrado verticalmente y un poco a la izquierda */
+}
+
+.mobile-carousel-custom .next-custom {
+  right: 40px;
+  /* Centrado verticalmente y un poco a la derecha */
+}
+
+/* Añadir sombra o un borde a las flechas para que se vean más visibles */
+.mobile-carousel-custom button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Aumenta la visibilidad al pasar el cursor */
+}
+
+
+/*ANSIOPTIX*/
+
+.contenedor-fondo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/img/ansioptixMobile.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea el contenido al inicio */
+  align-items: center;
+  padding: 20px 0; /* Espaciado mínimo arriba y abajo */
+}
+
+.contenedor-fondo img {
+  width: 80%; /* Tamaño de la imagen principal */
+  height: auto; /* Mantén proporciones */
+  margin-top: 120px; /* Espacio mínimo arriba de la imagen */
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.contenido-texto {
+  width: 90%;
+  text-align: left;
+  margin: 0; /* Sin margen extra */
+  margin-top: 90px;
+  color: white;
+}
+
+.contenido-texto h1 {
+  font-size: 2.2rem;
+  margin: 0 0 10px; /* Margen pequeño inferior */
+}
+
+.contenido-texto p {
+  font-size: 1.5rem;
+  margin: 0; /* Sin margen extra */
+}
+
+
+/*CARRUSEL FOTOS OBJETO*/
+
+.carrusel-registro h1 {
+  font-family: 'Amarante', sans-serif; /* Tipografía retro */
+  font-weight: 200;
+  text-align: center;
+  color: #523532; /* Color cálido retro */
+  margin-bottom: 10px; /* Reducimos el margen */
+  font-size: 1.8rem; /* Reducimos el tamaño del título */
+}
+
+/* Estilo del carrusel */
+.carrusel-registro h1 {
+  font-family: 'Amarante', sans-serif; /* Tipografía retro */
+  font-weight: 200;
+  text-align: center;
+  color: #523532; /* Color cálido retro */
+  margin-bottom: 10px; /* Reducimos el margen */
+  font-size: 1.8rem; /* Reducimos el tamaño del título */
+  margin-top: 100px;
+}
+
+/* Estilo del carrusel */
+.image-slider {
+  position: relative;
+  width: 90%;
+  max-width: 300px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 20px; 
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px; 
+}
+
+
+.prev-button1, .next-button1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px; 
+  cursor: pointer;
+  font-size: 20px; 
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  transition: background-color 0.3s ease;
+}
+
+.prev-button1:hover, .next-button1:hover {
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.prev-button1 {
+  left: 10px;
+}
+
+.next-button1 {
+  right: 10px;
+}
+
+/* CARRUSEL TATODOBIEN */
+/* CARRUSEL TATODOBIEN */
+.tatodobien-galeria {
+  display: none;
+}
+
+.mobile-carousel-custom1 h1 {
+  font-size: 18px;
+  text-align: center;
+  color: #523532; /* Color cálido retro */
+
+}
+
+.mobile-carousel-custom1 {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 10px; /* Agrega espacio a los costados */
+  margin-top: 70px;
+}
+
+.carousel-images-custom1 {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 10px; /* Añade espacio entre las imágenes */
+}
+
+.carousel-image-custom1 {
+  min-width: calc(100% - 20px); /* Ajusta las imágenes para que ocupen menos que el 100% */
+  display: none;
+  overflow: hidden;
+  margin: 0 10px; /* Espacio entre cada imagen */
+}
+
+.carousel-image-custom1.active {
+  display: block;
+}
+
+.carousel-image-custom1 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
+}
+.carousel-image-custom1 video {
+  width: 100%; /* Asegura que el video ocupe el 100% del ancho disponible */
+  height: auto; /* Mantiene la proporción del video */
+  object-fit: contain; /* Asegura que el video se ajuste al contenedor sin recortarse */
+  border-radius: 8px; /* Mantiene el borde redondeado, igual que las imágenes */
+}
+.carousel-indicators-custom1 {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot-custom1 {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot-custom1.active {
+  background-color: #717171;
+}
+
+/* Estilos de las flechas */
+.mobile-carousel-custom1 button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Flecha izquierda */
+.mobile-carousel-custom1 .prev-custom1 {
+  left: 40px; /* Mueve la flecha un poco más a la izquierda */
+}
+
+/* Flecha derecha */
+.mobile-carousel-custom1 .next-custom1 {
+  right: 40px; /* Mueve la flecha un poco más a la derecha */
+}
+
+/* Añadir sombra o un borde a las flechas para que se vean más visibles */
+.mobile-carousel-custom1 button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Aumenta la visibilidad al pasar el cursor */
+}
+
+/*TRANSMEDIA*/
+.transmedia {
+  font-size: 14px; 
+  padding: 20px; /* Agrega algo de espacio alrededor de la sección */
+}
+
+.transmedia h2 {
+  font-size: 2rem; /* Reduce el tamaño del título */
+  margin-top: 30px;
+}
+
+.transmedia h3 {
+  font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+  margin-top: -40px; /* Ajusta el margen para no empujar demasiado el contenido */
+  padding: 20px;
+  
+}
+
+.transmedia .line-background {
+  height: 190px; /* Reduce el tamaño de la línea de fondo en móviles */
+  width: 190px; /* Asegura que la imagen de fondo se ajuste */
+  margin-left: 0;
+  margin-top: -50px; /* Ajusta la imagen para que no quede demasiado arriba */
+  background-size: contain;
+}
+
+.flyers-container {
+  display: flex; /* Cambiado de grid a flex */
+  flex-direction: column; /* Alinea los folletos en una sola columna */
+  align-items: center; /* Centra los folletos en la pantalla */
+  gap: 15px; /* Reduce el espacio entre los folletos */
+  margin-top: 30px;
+}
+
+.flyer img {
+  width: 180px; 
+  height: auto;
+}
+
+/* LANDING PAGE */
+.landing-page {
+  margin: 20px auto; /* Reduce el margen para pantallas pequeñas */
+}
+
+.linea-roja {
+  width: 4px; /* Reduce el tamaño de la línea en mobile */
+  height: 80px;
+  margin-bottom: 8px; /* Ajusta la separación */
+}
+
+.titulo {
+  font-size: 1.5rem; /* Reduce el tamaño del texto en mobile */
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.computadora {
+  width: 280px; 
+  height: auto;
+}
+
+
+
+/* DIARIO DE TOMAS*/
+.linea-semana {
+  display: flex;
+  justify-content: flex-end; /* Alineamos la línea a la izquierda para que no quede pegada al borde derecho en pantallas pequeñas */
+  margin-bottom: 15px;
+}
+
+.lineaRoja2 {
+  width: 100%; /* Hacemos que la línea ocupe todo el ancho disponible */
+  max-width: 200px; /* Limita el tamaño máximo de la línea */
+  height: auto;
+  margin-right: 0; /* Eliminamos el margen derecho */
+}
+
+/* Título de la sección */
+.titulo-diario {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.5rem; /* Reducimos el tamaño de la fuente para pantallas pequeñas */
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 15px; /* Reducimos el espacio debajo del título */
+  text-align: center;
+  margin-top: 15px; /* Ajustamos el margen superior */
+}
+
+/* Imagen del diario */
+.imagen-diario-container {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-diario {
+  width: 90%; /* Ajustamos el tamaño de la imagen para que ocupe más espacio en pantallas pequeñas */
+  max-width: 250px; /* Limita el tamaño máximo de la imagen */
+  
+}
+
+
+/*CENTRO DE INFO DE TATO */
+.landing-page3 {
+  margin: 20px auto; /* Reduce el margen para pantallas pequeñas */
+}
+
+.linea-roja3 {
+  width: 4px; /* Reduce el tamaño de la línea en mobile */
+  height: 80px;
+  margin-bottom: 8px; /* Ajusta la separación */
+}
+
+.titulo3 {
+  font-size: 1.5rem; /* Reduce el tamaño del texto en mobile */
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.computadora3 {
+  width: 280px; 
+  height: auto;
+}
+
+
+/*audiciones TOMAS*/
+.transmedia2 {
+  font-size: 14px; 
+  padding: 20px; /* Agrega algo de espacio alrededor de la sección */
+}
+
+.transmedia2 h2 {
+  font-size: 2rem; /* Reduce el tamaño del título */
+  margin-top: 30px;
+}
+
+.transmedia2 h3 {
+  font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+  margin-top: -40px; /* Ajusta el margen para no empujar demasiado el contenido */
+  padding: 20px;
+  
+}
+
+.transmedia2 .line-background2 {
+  height: 190px; /* Reduce el tamaño de la línea de fondo en móviles */
+  width: 190px; /* Asegura que la imagen de fondo se ajuste */
+  margin-left: 0;
+  margin-top: -50px; /* Ajusta la imagen para que no quede demasiado arriba */
+  background-size: contain;
+}
+
+.flyers-container2 {
+  display: flex; /* Cambiado de grid a flex */
+  flex-direction: column; /* Alinea los folletos en una sola columna */
+  align-items: center; /* Centra los folletos en la pantalla */
+  gap: 15px; /* Reduce el espacio entre los folletos */
+  margin-top: 30px;
+}
+
+.flyer2 img {
+  width: 180px; 
+  height: auto;
+}
+
+/*DISCORD DE TALLER*/
+.landing-page4 {
+  margin: 20px auto; /* Reduce el margen para pantallas pequeñas */
+}
+
+.linea-roja4 {
+  width: 4px; /* Reduce el tamaño de la línea en mobile */
+  height: 80px;
+  margin-bottom: 8px; /* Ajusta la separación */
+}
+
+.titulo4 {
+  font-size: 1.5rem; /* Reduce el tamaño del texto en mobile */
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.computadora4 {
+  width: 280px; 
+  height: auto;
+}
+
+/* TESTIMONIOS */
+.linea-semana3 {
+  display: flex;
+  justify-content: flex-end; /* Alineamos la línea a la izquierda para que no quede pegada al borde derecho en pantallas pequeñas */
+  margin-bottom: 15px;
+}
+
+.lineaRoja3 {
+  width: 100%; /* Hacemos que la línea ocupe todo el ancho disponible */
+  max-width: 200px; /* Limita el tamaño máximo de la línea */
+  height: auto;
+  margin-right: 0; /* Eliminamos el margen derecho */
+}
+
+/* Título de la sección */
+.titulo-diario3 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.5rem; /* Reducimos el tamaño de la fuente para pantallas pequeñas */
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 15px; /* Reducimos el espacio debajo del título */
+  text-align: center;
+  margin-top: 15px; /* Ajustamos el margen superior */
+}
+
+/* Imagen del diario */
+.imagen-diario-container3 {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-diario3 {
+  width: 90%; /* Ajustamos el tamaño de la imagen para que ocupe más espacio en pantallas pequeñas */
+  max-width: 250px; /* Limita el tamaño máximo de la imagen */
+}
+
+/*HISTORIAS TOMAS*/
+.transmedia4 {
+  font-size: 14px; 
+  padding: 20px; /* Agrega algo de espacio alrededor de la sección */
+}
+
+.transmedia4 h2 {
+  font-size: 2rem; /* Reduce el tamaño del título */
+  margin-top: 30px;
+}
+
+.transmedia4 h3 {
+  font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+  margin-top: -40px; /* Ajusta el margen para no empujar demasiado el contenido */
+  padding: 20px;
+  
+}
+
+.transmedia4 .line-background4 {
+  height: 190px; /* Reduce el tamaño de la línea de fondo en móviles */
+  width: 190px; /* Asegura que la imagen de fondo se ajuste */
+  margin-left: 0;
+  margin-top: -50px; /* Ajusta la imagen para que no quede demasiado arriba */
+  background-size: contain;
+}
+
+.flyers-container4 {
+  display: flex; /* Cambiado de grid a flex */
+  flex-direction: column; /* Alinea los folletos en una sola columna */
+  align-items: center; /* Centra los folletos en la pantalla */
+  gap: 15px; /* Reduce el espacio entre los folletos */
+  margin-top: 30px;
+}
+
+.flyer4 img {
+  width: 180px; 
+  height: auto;
+}
+
+/*STAND DE TATO DOBIEN*/
+.landing-page5 {
+  margin: 20px auto; /* Reduce el margen para pantallas pequeñas */
+}
+
+.linea-roja5 {
+  width: 4px; /* Reduce el tamaño de la línea en mobile */
+  height: 80px;
+  margin-bottom: 8px; /* Ajusta la separación */
+}
+
+.titulo5 {
+  font-size: 1.5rem; /* Reduce el tamaño del texto en mobile */
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.computadora5 {
+  width: 280px; 
+  height: auto;
+}
+
+
+/*busqueda del tesoro*/
+.landing-page6 {
+  margin: 20px auto; /* Reduce los márgenes */
+}
+
+/* Línea roja */
+.linea-roja6 {
+  height: 80px; /* Reduce la altura de la línea */
+  margin-bottom: 5px; /* Menor separación */
+}
+
+/* Título LANDING PAGE */
+.titulo6 {
+  font-size: 1.5rem; /* Reduce el tamaño de la fuente */
+  margin-top: 10px;
+  margin-bottom: 15px; /* Espaciado más pequeño */
+}
+
+/* Contenedor de cards */
+.cards-container6 {
+  grid-template-columns: 1fr; /* Una columna */
+  gap: 15px; /* Espaciado entre las cards */
+}
+
+/* Estilo de las cards */
+.card6 {
+  width: 60%; /* Ocupa el 90% del ancho del contenedor */
+  padding: 10px; /* Reduce el padding */
+  box-shadow: 0 2px 4px rgba(67, 67, 67, 0.2); /* Sombra más ligera */
+}
+
+.card-image6 {
+  width: 100%;
+  border-radius: 8px; /* Bordes más pequeños */
+}
+
+.card-text6 {
+  font-size: 1.2rem; /* Fuente más pequeña */
+  margin-top: 8px;
+}
+
+/*audiciones TOMAS*/
+.transmedia2 {
+  font-size: 14px; 
+  padding: 20px; /* Agrega algo de espacio alrededor de la sección */
+}
+
+.transmedia2 h2 {
+  font-size: 2rem; /* Reduce el tamaño del título */
+  margin-top: 30px;
+}
+
+.transmedia2 h3 {
+  font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+  margin-top: -40px; /* Ajusta el margen para no empujar demasiado el contenido */
+  padding: 20px;
+  
+}
+
+.transmedia2 .line-background2 {
+  height: 190px; /* Reduce el tamaño de la línea de fondo en móviles */
+  width: 190px; /* Asegura que la imagen de fondo se ajuste */
+  margin-left: 0;
+  margin-top: -50px; /* Ajusta la imagen para que no quede demasiado arriba */
+  background-size: contain;
+}
+
+.flyers-container2 {
+  display: flex; /* Cambiado de grid a flex */
+  flex-direction: column; /* Alinea los folletos en una sola columna */
+  align-items: center; /* Centra los folletos en la pantalla */
+  gap: 15px; /* Reduce el espacio entre los folletos */
+  margin-top: 30px;
+}
+
+.flyer2 img {
+  width: 180px; 
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+/*HISTORIAS TOMAS*/
+.transmedia7 {
+  font-size: 14px; 
+  padding: 20px; /* Agrega algo de espacio alrededor de la sección */
+}
+
+.transmedia7 h2 {
+  font-size: 2rem; /* Reduce el tamaño del título */
+  margin-top: 30px;
+}
+
+.transmedia7 h3 {
+  font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+  margin-top: -40px; /* Ajusta el margen para no empujar demasiado el contenido */
+  padding: 20px;
+  
+}
+
+.transmedia7 .line-background7 {
+  height: 190px; /* Reduce el tamaño de la línea de fondo en móviles */
+  width: 190px; /* Asegura que la imagen de fondo se ajuste */
+  margin-left: 0;
+  margin-top: -50px; /* Ajusta la imagen para que no quede demasiado arriba */
+  background-size: contain;
+}
+
+.flyers-container7 {
+  display: flex; /* Cambiado de grid a flex */
+  flex-direction: column; /* Alinea los folletos en una sola columna */
+  align-items: center; /* Centra los folletos en la pantalla */
+  gap: 15px; /* Reduce el espacio entre los folletos */
+  margin-top: 30px;
+}
+
+.flyer7 img {
+  width: 180px; 
+  height: auto;
+}
+
+.cabina-section {
+  flex-direction: column; /* Cambia la orientación a columna */
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  padding: 30px; /* Reduce el padding */
+  margin-top: 40px;
+}
+
+/* Ajuste del título */
+.cabina-section .text-section h2 {
+  font-size: 3rem; /* Reduce el tamaño del título */
+  padding-left: 0; /* Quita el margen lateral */
+  text-align: left; /* Centra el texto */
+  margin-top: 30px;
+}
+
+/* Ajuste de los párrafos */
+.cabina-section .text-section p {
+  font-size: 1.6rem; /* Reduce el tamaño de la fuente */
+  padding-left: 0; /* Quita el margen lateral */
+  text-align: justify; /* Justifica el texto */
+}
+
+/* Ajuste del video */
+.video-section {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-top: 30px; /* Añade separación entre texto y video */
+  justify-content: center; /* Centra el video */
+}
+
+.cabina-video {
+  width: 100%; /* El video se ajusta al ancho disponible */
+  max-width: 300px; /* Limita el ancho máximo del video */
+}
+
+.cabina-process {
+  align-items: center; /* Centra los elementos */
+}
+
+.cabina-process h2 {
+  font-size: 3rem; /* Reduce el tamaño del título */
+  padding: 30px; /* Quita el margen lateral */
+}
+
+/* Ajustes para .plano-idea */
+.plano-idea {
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: left; /* Centra los elementos */
+  padding: 30px;
+  margin-top: -140px;
+}
+
+.right, .left {
+  max-width: 100%; /* Los elementos ocupan el ancho completo */
+  text-align: left; /* Centra los textos e imágenes */
+  padding: 10px;
+}
+
+.right h2 {
+  font-size: 2.5rem; /* Reduce el tamaño del encabezado */
+}
+
+.right p {
+  font-size: 1.6rem; /* Reduce el tamaño del párrafo */
+}
+
+.left img {
+  width: 80%; /* Imagen más pequeña pero proporcional */
+}
+
+/* Ajustes para .Boton y sus subclases */
+.Boton {
+  flex-direction: column; /* Apila elementos verticalmente */
+  align-items: left; /* Centra los elementos */
+  gap: 10px; /* Reduce el espaciado entre elementos */
+}
+
+.rightBoton, .leftBoton {
+  max-width: 100%; /* Ocupan el ancho completo */
+  text-align: left; /* Centra los textos e imágenes */
+  padding: 30px;
+}
+
+.rightBoton h2 {
+  font-size: 2.5rem; /* Reduce el tamaño del encabezado */
+}
+
+.rightBoton p {
+  font-size: 1.6rem; /* Reduce el tamaño del texto */
+}
+
+.leftBoton img {
+  width: 70%; /* Imagen más pequeña pero proporcional */
+  padding-left: 70px; /* Centra textos e imágenes */
+}
+
+/* Ajustes para las demás secciones (Estructura, ElectronicaCabina) */
+.Estructura, .ElectronicaCabina {
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: left; /* Centra los elementos */
+  gap: 10px; /* Reduce el espaciado entre elementos */
+}
+
+.rightEstructura, .rightElectronicaCabina, 
+.leftEstructura, .leftElectronicaCabina {
+  max-width: 100%; /* Los elementos ocupan el ancho completo */
+  text-align: left; /* Centra textos e imágenes */
+  padding: 30px;
+}
+
+.rightEstructura h2, .rightElectronicaCabina h2 {
+  font-size: 2.5rem; /* Reduce el tamaño del encabezado */
+}
+
+.rightEstructura p, .rightElectronicaCabina p {
+  font-size: 1.6rem; /* Reduce el tamaño del texto */
+}
+
+.leftEstructura img, .leftElectronicaCabina img {
+  width: 80%; /* Imagen más pequeña pero proporcional */
+}
+
+
+/* FINAL */
+.cabina-section2 {
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  padding: 30px; /* Reduce el padding */
+  gap: 0;
+}
+
+/* Ajuste del título */
+.cabina-section2 .text-section2 h2 {
+  font-size: 3rem; /* Reduce el tamaño del título */
+  padding-left: 0; /* Quita el margen lateral */
+  text-align: left; /* Centra el texto */
+  margin-top: 30px;
+}
+
+/* Ajuste de los párrafos */
+.cabina-section2 .text-section2 p {
+  font-size: 1.6rem; /* Reduce el tamaño de la fuente */
+  padding-left: 0; /* Quita el margen lateral */
+  text-align: justify; /* Justifica el texto */
+}
+
+/* Ajuste del video */
+.video-section2 {
+  width: 100%; /* El contenedor ocupa todo el ancho */
+  padding: 30px; /* Añade el padding alrededor del contenido */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+  margin-top: 30px; /* Añade separación superior */
+  display: flex; /* Para centrar el video */
+  justify-content: center; /* Centra el video horizontalmente */
+  
+}
+
+.cabina-video2 {
+  width: 100%; /* El video se ajusta al ancho disponible */
+  max-width: 300px; /* Limita el ancho máximo del video */
+}
+.boton-container2{
+  display:none;
+}
+.titulo-diario7 {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.5rem; /* Reducimos el tamaño de la fuente para pantallas pequeñas */
+  font-weight: 200;
+  color: #472B1D;
+  margin-bottom: 15px; /* Reducimos el espacio debajo del título */
+  text-align: center;
+  margin-top: 15px; /* Ajustamos el margen superior */
+}
+
+/* Imagen del diario */
+.imagen-diario-container7 {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-diario7 {
+  width: 90%; /* Ajustamos el tamaño de la imagen para que ocupe más espacio en pantallas pequeñas */
+  max-width: 250px; /* Limita el tamaño máximo de la imagen */
+}
+}
+  
+  
+  
